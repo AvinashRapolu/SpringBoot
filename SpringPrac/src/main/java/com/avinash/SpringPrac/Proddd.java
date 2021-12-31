@@ -1,9 +1,5 @@
 package com.avinash.SpringPrac;
-
-import lombok.Data;
-
 import java.util.List;
-@Data
 public class Proddd {
     private List<Product> item;
 

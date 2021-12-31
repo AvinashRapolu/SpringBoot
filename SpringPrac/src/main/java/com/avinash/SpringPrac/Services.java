@@ -9,21 +9,17 @@ import java.util.List;
 public class Services {
 
     private List<Product> products=new ArrayList<>();
-
-
     public void add(Product product)
     {
         products.add(product);
     }
-
-
     public List<Product> getAll()
     {
         return products;
     }
     public void del(String product)
     {
-        products.remove(products.stream().filter(p ->p.getPName().equals(product)).findFirst().orElse(null));
+        products.remove(products.stream().filter(p -> p.getpName().equals(product)).findFirst().orElse(null));
     }
 
 }

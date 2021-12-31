@@ -3,6 +3,7 @@ package com.avinash.SpringPrac;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @RestController
@@ -13,7 +14,7 @@ public class Controller
     private Services services;
 
     @PostMapping ("/add")
-            public void add(@RequestBody Product product)
+            public void add(@Valid @RequestBody Product product)
     {
         services.add(product);
     }

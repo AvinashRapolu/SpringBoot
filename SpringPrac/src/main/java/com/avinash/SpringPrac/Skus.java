@@ -1,9 +1,5 @@
 package com.avinash.SpringPrac;
-
-import lombok.Data;
-
 import java.util.List;
-@Data
 public class Skus
 {
     private String skuC;

@@ -1,36 +1,48 @@
 package com.avinash.SpringPrac;
 
-import lombok.Data;
-
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 import java.util.List;
-@Data
 public class Product
 {
+    @NotEmpty
     private String pName;
+    @Email
+    private String mail;
+
     private int pId;
     private List<Skus> sk;
 
-//    public String getpName() {
-//        return pName;
-//    }
-//
-//    public void setpName(String pName) {
-//        this.pName = pName;
-//    }
-//
-//    public int getpId() {
-//        return pId;
-//    }
-//
-//    public void setpId(int pId) {
-//        this.pId = pId;
-//    }
-//
-//    public List<Skus> getSk() {
-//        return sk;
-//    }
-//
-//    public void setSk(List<Skus> sk) {
-//        this.sk = sk;
-//    }
+    public String getpName() {
+        return pName;
+    }
+
+    public void setpName(String pName) {
+        this.pName = pName;
+    }
+
+    public String getMail() {
+        return mail;
+    }
+
+    public void setMail(String mail) {
+        this.mail = mail;
+    }
+
+    public int getpId() {
+        return pId;
+    }
+
+    public void setpId(int pId) {
+        this.pId = pId;
+    }
+
+    public List<Skus> getSk() {
+        return sk;
+    }
+
+    public void setSk(List<Skus> sk) {
+        this.sk = sk;
+    }
 }
