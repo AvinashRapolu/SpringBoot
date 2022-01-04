@@ -6,11 +6,11 @@ import javax.validation.constraints.NotNull;
 import java.util.List;
 public class Product
 {
-    @NotEmpty
+    @NotEmpty(message = "product name cannot be empty.")
     private String pName;
-    @Email
+    @Email(message = "give a valid email address")
     private String mail;
-
+  @AgeValidator
     private int pId;
     private List<Skus> sk;
 
